@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Philosopher
+- Font Author: Copyright 2011 The Philosopher Project Authors (lemonad@jovanny.ru)
+- Font Source: http://fonts.gstatic.com/s/philosopher/v19/vEFI2_5QCwIS4_Dhez5jcWjVamgc-NaXXq7H.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

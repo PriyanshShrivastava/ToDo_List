@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* #fdba74
+27272a
+*/
+
+:root {
+  --brand-color: #fdba74;
+  --dark-color: #27272a;
+  --mid-color: #fed7aa;
+  --light-color: #f8fafc;
+  accent-color: var(--brand-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-color);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family: "Poppins", sans;
+}
+
+/* Navbar  */
+
+.navbar {
+  width: 100%;
+  background-color: var(--brand-color);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  padding: 4px 50px;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  transition: 0.5s all;
+}
+
+.img-container .logo-img:hover {
+  transform: scale(1.2);
+}
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+/* Main container  */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Main heading  */
+
+.container h1 {
+  background-color: var(--brand-color);
+  color: var(--dark-color);
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2%;
+  font-weight: 700;
+}
+/* List container with form */
+.container .list-container {
+  box-shadow: 1px 1px 3px var(--mid-color), inset 1px 1px 3px var(--mid-color);
+  padding: 5% 5%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 400px;
+  transition: 0.5s all;
+}
+
+/* Seperate list container  */
+
+.list-container .lists {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 4%;
+}
+
+/* List item div with checkbox  */
+
+.lists .item {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0 1 rem;
+  align-items: center;
+}
+
+/* List items  */
+
+.list-items {
+  color: var(--brand-color);
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+/* form  */
+
+.list-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+form input#item-input {
+  font-size: 1.2rem;
+  width: 75%;
+  height: 1.8rem;
+  border-radius: 5px;
+  padding: 12px 10px;
+  background-color: var(--mid-color);
+  border: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-color);
+}
+
+form input::placeholder {
+  color: #222;
+  font-size: 1rem;
+}
+
+form input#item-input:focus::placeholder,
+form input#item-input:active::placeholder {
+  color: #ccc;
+}
+
+input.checkbox {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+form input#item-input:focus,
+form input#item-input:active {
+  outline: none;
+  background-color: transparent;
+  box-shadow: inset 3px 3px var(--brand-color), 3px 3px var(--brand-color);
+  color: #ccc;
+}
+
+input.checkbox:checked + li {
+  text-decoration: line-through;
+  text-decoration-color: var(--mid-color);
+  text-decoration-thickness: 3px;
+}
+form button {
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  border-radius: 50%;
+  background-color: var(--mid-color);
+  border: none;
+  cursor: pointer;
+}
+
+form button i.add {
+  font-size: 0.75rem;
+  color: var(--dark-color);
+}
+form button:hover {
+  font-weight: 500;
+  background-color: var(--brand-color);
+}
+
+/* Footer  */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding: 4px 50px;
+}
+
+.creator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.creator p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.creator p span {
+  color: var(--brand-color);
+  font-size: 1.2rem;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.socials h3 {
+  font-weight: 500;
+}
+
+.social-icon {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.social-icon i {
+  font-size: 1.4rem;
+  color: var(--brand-color);
+}
+
+.social-icon i:hover {
+  color: var(--mid-color);
+}
+@media (max-width: 30em) {
+  .navbar {
+    padding: 4px 25px;
+  }
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer {
+    padding: 4px 25px;
+  }
+
+  .creator p {
+    font-size: 0.8rem;
+  }
+
+  .creator p span {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .socials h3 {
+    font-size: 1rem;
+  }
+  .social-icon i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 26em) {
+  .container .list-container {
+    padding: 5% 3%;
+    width: 280px;
+  }
+}
