@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config({ path: `${__dirname}/config.env` });
 let day = require(`${__dirname}/date`);
 const mongoose = require("mongoose");
 const _ = require("lodash");
@@ -9,7 +11,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.set("strictQuery", true);
-const DB = `mongodb+srv://priyansh01:FL09yW0DGslN87jb@cluster1.qpz58it.mongodb.net/toDoListDB`;
+const DB = process.env.DATABASE.replace(
+  "<PASSWORD>",
+  process.env.DATABASE_PASSWORD
+);
 mongoose.connect(DB, {
   useNewUrlParser: true,
 });
